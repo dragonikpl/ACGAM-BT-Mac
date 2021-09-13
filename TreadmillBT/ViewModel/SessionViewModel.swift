@@ -14,15 +14,19 @@ class SessionViewModel: ObservableObject {
     private let context: NSManagedObjectContext
     private var bag = Set<AnyCancellable>()
     private var currentRun: Run?
-    
+
+    var userDataProvider: UserDataProvider
+
     @Published var currentState: TreadmillState = .unknown
     @Published private var hoursOffset: Double = 0
-    
+
     init(treadmillValuesProvider: TreadmillValuesProvider = BluetoothService(),
-         context: NSManagedObjectContext = PersistenceService.shared.viewContext) {
+         context: NSManagedObjectContext = PersistenceService.shared.viewContext,
+         userDataProvider: UserDataProvider = DefaultUserDataProvider()) {
         self.treadmillValuesProvider = treadmillValuesProvider
         self.context = context
-        
+        self.userDataProvider = userDataProvider
+
         setupSubscriptions()
     }
     

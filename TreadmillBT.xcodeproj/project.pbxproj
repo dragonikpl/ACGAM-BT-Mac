@@ -30,6 +30,10 @@
 		720E572B266009BA00C4E56E /* VisualEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720E572A266009BA00C4E56E /* VisualEffectView.swift */; };
 		72430751265ECD3D00F4461F /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72430750265ECD3D00F4461F /* Formatters.swift */; };
 		72430753265ED6D000F4461F /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72430752265ED6D000F4461F /* Typealiases.swift */; };
+		F6C5B63FCD1AD41BF4F0DD3E /* UserDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C5B9801FA901E60AA29032 /* UserDataProvider.swift */; };
+		F6C5B87CCC6826B2B5BA3D6E /* UserDefaultsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C5B580CD0F12E4D9B0A684 /* UserDefaultsKey.swift */; };
+		F6C5BB574E61F36E40147927 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C5BE97CEC1AAD62685CD39 /* SettingsView.swift */; };
+		F6C5BDF11767AE51F3B8B66E /* DefaultUserDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C5BA17E44D488CCA86DAF5 /* DefaultUserDataProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +63,10 @@
 		720E572A266009BA00C4E56E /* VisualEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEffectView.swift; sourceTree = "<group>"; };
 		72430750265ECD3D00F4461F /* Formatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
 		72430752265ED6D000F4461F /* Typealiases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealiases.swift; sourceTree = "<group>"; };
+		F6C5B580CD0F12E4D9B0A684 /* UserDefaultsKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsKey.swift; sourceTree = "<group>"; };
+		F6C5B9801FA901E60AA29032 /* UserDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDataProvider.swift; sourceTree = "<group>"; };
+		F6C5BA17E44D488CCA86DAF5 /* DefaultUserDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultUserDataProvider.swift; sourceTree = "<group>"; };
+		F6C5BE97CEC1AAD62685CD39 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +127,7 @@
 				720E5726265F8D8100C4E56E /* TodaysSummaryView.swift */,
 				720E5728265F8E3500C4E56E /* TodaysRunsView.swift */,
 				720E572A266009BA00C4E56E /* VisualEffectView.swift */,
+				F6C5BE97CEC1AAD62685CD39 /* SettingsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -162,6 +171,7 @@
 			children = (
 				72062BFE2657DE5700044920 /* BluetoothService.swift */,
 				720E420A265E75DB001685FF /* PersistanceService.swift */,
+				F6C5BA17E44D488CCA86DAF5 /* DefaultUserDataProvider.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -178,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				72062C04265BB48E00044920 /* TreadmillState.swift */,
+				F6C5B580CD0F12E4D9B0A684 /* UserDefaultsKey.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -195,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				72062C0C265CFE7200044920 /* TreadmillValuesProvider.swift */,
+				F6C5B9801FA901E60AA29032 /* UserDataProvider.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -314,6 +326,10 @@
 				72062BD22656674300044920 /* MainViewController.swift in Sources */,
 				72430753265ED6D000F4461F /* Typealiases.swift in Sources */,
 				720E5729265F8E3500C4E56E /* TodaysRunsView.swift in Sources */,
+				F6C5B63FCD1AD41BF4F0DD3E /* UserDataProvider.swift in Sources */,
+				F6C5BDF11767AE51F3B8B66E /* DefaultUserDataProvider.swift in Sources */,
+				F6C5B87CCC6826B2B5BA3D6E /* UserDefaultsKey.swift in Sources */,
+				F6C5BB574E61F36E40147927 /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,7 +471,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"TreadmillBT/Resources/Preview\"";
-				DEVELOPMENT_TEAM = H4U53D9TZ2;
+				DEVELOPMENT_TEAM = DJGL9PFH9D;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = TreadmillBT/Info.plist;
@@ -479,7 +495,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"TreadmillBT/Resources/Preview\"";
-				DEVELOPMENT_TEAM = H4U53D9TZ2;
+				DEVELOPMENT_TEAM = DJGL9PFH9D;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = TreadmillBT/Info.plist;

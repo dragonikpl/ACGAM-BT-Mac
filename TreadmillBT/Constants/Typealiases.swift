@@ -11,3 +11,4 @@ typealias Length = Measurement<UnitLength>
 typealias Speed = Measurement<UnitSpeed>
 typealias Duration = Measurement<UnitDuration>
 typealias Energy = Measurement<UnitEnergy>
+typealias Mass = Measurement<UnitMass>
