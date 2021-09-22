@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct RunView: View {
     @EnvironmentObject var session: SessionViewModel
     
     var body: some View {
@@ -27,7 +27,7 @@ struct ContentView_Previews: PreviewProvider {
             context: PersistenceService.preview.viewContext)
         
         return Group {
-            ContentView()
+            RunView()
                 .environment(\.managedObjectContext, PersistenceService.preview.viewContext)
                 .environmentObject(session)
                 .previewLayout(PreviewLayout.fixed(width: 300, height: 500))

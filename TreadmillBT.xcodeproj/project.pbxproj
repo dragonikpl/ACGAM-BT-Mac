@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		72062BBC265666CD00044920 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72062BBB265666CD00044920 /* AppDelegate.swift */; };
-		72062BBE265666CD00044920 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72062BBD265666CD00044920 /* ContentView.swift */; };
 		72062BC1265666CD00044920 /* TreadmillBT.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 72062BBF265666CD00044920 /* TreadmillBT.xcdatamodeld */; };
 		72062BC3265666CF00044920 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72062BC2265666CF00044920 /* Assets.xcassets */; };
 		72062BC6265666CF00044920 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72062BC5265666CF00044920 /* Preview Assets.xcassets */; };
@@ -30,12 +29,14 @@
 		720E572B266009BA00C4E56E /* VisualEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720E572A266009BA00C4E56E /* VisualEffectView.swift */; };
 		72430751265ECD3D00F4461F /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72430750265ECD3D00F4461F /* Formatters.swift */; };
 		72430753265ED6D000F4461F /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72430752265ED6D000F4461F /* Typealiases.swift */; };
+		7594A28126FA6661006B8BA8 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7594A27F26FA6661006B8BA8 /* MainView.swift */; };
+		7594A28226FA6661006B8BA8 /* RunView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7594A28026FA6661006B8BA8 /* RunView.swift */; };
+		F6C5B0E069DD2CF3A19BF4FE /* FetchedResults+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C5B60810767DA838C85289 /* FetchedResults+extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		72062BB8265666CD00044920 /* TreadmillBT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TreadmillBT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72062BBB265666CD00044920 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		72062BBD265666CD00044920 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		72062BC0265666CD00044920 /* TreadmillBT.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TreadmillBT.xcdatamodel; sourceTree = "<group>"; };
 		72062BC2265666CF00044920 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		72062BC5265666CF00044920 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -59,6 +60,9 @@
 		720E572A266009BA00C4E56E /* VisualEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEffectView.swift; sourceTree = "<group>"; };
 		72430750265ECD3D00F4461F /* Formatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
 		72430752265ED6D000F4461F /* Typealiases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealiases.swift; sourceTree = "<group>"; };
+		7594A27F26FA6661006B8BA8 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		7594A28026FA6661006B8BA8 /* RunView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunView.swift; sourceTree = "<group>"; };
+		F6C5B60810767DA838C85289 /* FetchedResults+extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FetchedResults+extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +118,8 @@
 		72062BF82657D2A500044920 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				72062BBD265666CD00044920 /* ContentView.swift */,
+				7594A27F26FA6661006B8BA8 /* MainView.swift */,
+				7594A28026FA6661006B8BA8 /* RunView.swift */,
 				72062C11265D9BE200044920 /* RunningView.swift */,
 				720E5726265F8D8100C4E56E /* TodaysSummaryView.swift */,
 				720E5728265F8E3500C4E56E /* TodaysRunsView.swift */,
@@ -203,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				72062C0F265D98CE00044920 /* Measurement+extensions.swift */,
+				F6C5B60810767DA838C85289 /* FetchedResults+extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -295,13 +301,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				720E4208265E641B001685FF /* Run+CoreData.swift in Sources */,
+				7594A28126FA6661006B8BA8 /* MainView.swift in Sources */,
 				72062C02265BB11200044920 /* TreadmillParser.swift in Sources */,
 				72430751265ECD3D00F4461F /* Formatters.swift in Sources */,
 				72062C0D265CFE7200044920 /* TreadmillValuesProvider.swift in Sources */,
 				72062C12265D9BE200044920 /* RunningView.swift in Sources */,
 				720E572B266009BA00C4E56E /* VisualEffectView.swift in Sources */,
 				720E420B265E75DB001685FF /* PersistanceService.swift in Sources */,
-				72062BBE265666CD00044920 /* ContentView.swift in Sources */,
+				7594A28226FA6661006B8BA8 /* RunView.swift in Sources */,
 				72062BC1265666CD00044920 /* TreadmillBT.xcdatamodeld in Sources */,
 				72062C10265D98CE00044920 /* Measurement+extensions.swift in Sources */,
 				72062BBC265666CD00044920 /* AppDelegate.swift in Sources */,
@@ -314,6 +321,7 @@
 				72062BD22656674300044920 /* MainViewController.swift in Sources */,
 				72430753265ED6D000F4461F /* Typealiases.swift in Sources */,
 				720E5729265F8E3500C4E56E /* TodaysRunsView.swift in Sources */,
+				F6C5B0E069DD2CF3A19BF4FE /* FetchedResults+extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,7 +463,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"TreadmillBT/Resources/Preview\"";
-				DEVELOPMENT_TEAM = H4U53D9TZ2;
+				DEVELOPMENT_TEAM = DJGL9PFH9D;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = TreadmillBT/Info.plist;

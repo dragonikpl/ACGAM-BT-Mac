@@ -12,11 +12,11 @@ import CoreData
 public class Run: NSManagedObject {}
 
 extension Run: Identifiable {
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<Run> {
+    class func fetchRequest(period: StatsView.StatType = .day, startingFrom: Date = Date()) -> NSFetchRequest<Run> {
         let request = NSFetchRequest<Run>(entityName: "Run")
         request.sortDescriptors = [NSSortDescriptor(keyPath: \Run.start, ascending: false)]
         request.includesPendingChanges = false
-        request.predicate = todaysPredicate
+        request.predicate = period.predicate(startingDate: startingFrom)
         return request
     }
     

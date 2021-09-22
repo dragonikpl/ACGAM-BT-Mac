@@ -26,7 +26,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         print(PersistenceService.shared.container)
         
-        let contentView = ContentView()
+        let contentView = MainView()
             .environmentObject(session)
             .environment(\.managedObjectContext, PersistenceService.shared.viewContext)
         

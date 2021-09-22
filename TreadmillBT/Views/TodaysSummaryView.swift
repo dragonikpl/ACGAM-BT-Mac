@@ -12,15 +12,15 @@ struct TodaysSummaryView: View {
     var items: FetchedResults<Run>
     
     var sumDistance: Length {
-        Length(value: items.reduce(0.0) { $0 + $1.distance}, unit: .kilometers)
+        items.sumDistance
     }
     
     var sumDuration: Duration {
-        Duration(value: items.reduce(0.0) { $0 + $1.duration }, unit: .seconds)
+        items.sumDuration
     }
     
     var sumCalorieBurn: Energy {
-        Energy(value: items.reduce(0) { $0 + $1.calorie }, unit: .calories)
+        items.sumCalorieBurn
     }
     
     var body: some View {
