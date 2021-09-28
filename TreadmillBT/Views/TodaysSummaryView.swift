@@ -24,7 +24,7 @@ struct TodaysSummaryView: View {
     }
     
     var body: some View {
-        Text("All runs:").font(.headline)
+        Text("All today runs:").font(.headline)
         HStack {
             Text("\(sumDistance.asString())")
                 .font(.system(size: 13))

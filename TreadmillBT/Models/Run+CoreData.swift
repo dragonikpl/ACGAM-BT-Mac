@@ -12,30 +12,25 @@ import CoreData
 public class Run: NSManagedObject {}
 
 extension Run: Identifiable {
-    class func fetchRequest(period: StatsView.StatType = .day, startingFrom: Date = Date()) -> NSFetchRequest<Run> {
+    class func fetchRequest(period: PeriodType = .day, startingFrom: Date = Date()) -> NSFetchRequest<Run> {
         let request = NSFetchRequest<Run>(entityName: "Run")
         request.sortDescriptors = [NSSortDescriptor(keyPath: \Run.start, ascending: false)]
         request.includesPendingChanges = false
         request.predicate = period.predicate(startingDate: startingFrom)
         return request
     }
+
+    class func oldest() -> NSFetchRequest<Run>  {
+        let request = NSFetchRequest<Run>(entityName: "Run")
+        request.sortDescriptors = [NSSortDescriptor(keyPath: \Run.start, ascending: true)]
+        request.fetchLimit = 1
+        request.includesPendingChanges = false
+        return request
+    }
     
     @NSManaged public var start: Date
     @NSManaged public var end: Date?
     @NSManaged public var logs: [[Int]]?
-    
-    class var todaysPredicate: NSCompoundPredicate {
-        var calendar = Calendar.current
-        calendar.timeZone = NSTimeZone.local
-
-        let dateFrom = calendar.startOfDay(for: Date()) // eg. 2016-10-10 00:00:00
-        let dateTo = calendar.date(byAdding: .day, value: 1, to: dateFrom)!
-
-        let fromPredicate = NSPredicate(format: "start >= %@", dateFrom as NSDate)
-        let toPredicate = NSPredicate(format: "start < %@", dateTo as NSDate)
-        let endDatePredicate = NSPredicate(format: "end != nil")
-        return NSCompoundPredicate(andPredicateWithSubpredicates: [fromPredicate, toPredicate, endDatePredicate])
-    }
 }
 
 extension Run {
